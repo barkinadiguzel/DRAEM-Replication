@@ -20,9 +20,7 @@ class DRAEM(nn.Module):
             Ma = None
 
         Ir = self.reconstructive(Ia)
-        Ic = torch.cat([Ia, Ir], dim=0)  
-        Mo = self.discriminative(Ic.unsqueeze(0)).squeeze(0)  
+        Ic = torch.cat([Ia, Ir], dim=1)  
+        eta_max = image_level_score(Mo)
 
-        eta_max, eta_mean = image_level_score(Mo)
-
-        return Ir, Mo, eta_max, eta_mean, Ma
+        return Ir, Mo, eta_max, Ma
