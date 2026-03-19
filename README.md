@@ -86,8 +86,6 @@ DRAEM-Replication/
 │   │   └── unet_blocks.py           # U-Net building blocks
 │   │
 │   ├── modules/
-│   │   ├── loss.py                   # Lrec + Lseg (optional, theoretical)
-│   │   ├── ssim.py                   # SSIM computation (optional)
 │   │   └── anomaly_map.py            # Mo → η
 │   │
 │   ├── model/
